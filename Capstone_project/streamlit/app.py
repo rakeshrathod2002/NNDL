@@ -20,7 +20,7 @@ import streamlit as st
 from PIL import Image
 import os
 
-model = tf.keras.models.load_model('PlantDNet.h5')
+model = tf.keras.models.load_model("https://prabhukiran.s3.ap-south-1.amazonaws.com/PlantDNet.h5")
 disease_class = ['Potato__bell___Bacterial_spot', 'Potato__bell___healthy', 'Pepper___Early_blight',
                          'Pepper___Late_blight', 'Pepper___healthy', 'Tomato_Bacterial_spot', 'Tomato_Early_blight',
                          'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot',
