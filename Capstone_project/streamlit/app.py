@@ -2,9 +2,9 @@ import os
 import tensorflow as tf
 import numpy as np
 from tensorflow import keras
-from skimage import io
+# from skimage import io
 from tensorflow.keras.preprocessing import image
-import streamlit as st
+# import streamlit as st
 
 def warn(*args, **kwargs):
 	pass
@@ -14,22 +14,13 @@ def warn(*args, **kwargs):
 
 import streamlit as st
 
-def warn(*args, **kwargs):
-	pass
-	import warnings
-	warnings.warn = warn
-
-import tensorflow as tf
-from tensorflow.keras.models import load_model
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.preprocessing.image import img_to_array
+# from tensorflow.keras.models import load_model
+# from tensorflow.keras.optimizers import Adam
+# from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
-import numpy as np
-import pickle, os
+import os
 
-model_path = os.path.join("PlantDNet.h5")
-model = tf.keras.models.load_model('PlantDNet.h5', compile=False)
-
+model = tf.keras.models.load_model('PlantDNet.h5')
 disease_class = ['Potato__bell___Bacterial_spot', 'Potato__bell___healthy', 'Pepper___Early_blight',
                          'Pepper___Late_blight', 'Pepper___healthy', 'Tomato_Bacterial_spot', 'Tomato_Early_blight',
                          'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot',
@@ -38,7 +29,7 @@ disease_class = ['Potato__bell___Bacterial_spot', 'Potato__bell___healthy', 'Pep
 
 def model_predict(img_path, model):
     img = image.load_img(img_path, grayscale=False, target_size=(64, 64))
-    show_img = image.load_img(img_path, grayscale=False, target_size=(64, 64))
+    # show_img = image.load_img(img_path, grayscale=False, target_size=(64, 64))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     x = np.array(x, 'float32')
