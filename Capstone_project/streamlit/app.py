@@ -19,7 +19,9 @@ import streamlit as st
 # from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
 import os
-
+path = os.getcwd()
+files = os.listdir(path)
+st.write(files)
 model = tf.keras.models.load_model("PlantDNet.h5")
 disease_class = ['Potato__bell___Bacterial_spot', 'Potato__bell___healthy', 'Pepper___Early_blight',
                          'Pepper___Late_blight', 'Pepper___healthy', 'Tomato_Bacterial_spot', 'Tomato_Early_blight',
