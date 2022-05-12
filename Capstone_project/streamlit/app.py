@@ -27,7 +27,7 @@ from PIL import Image
 import numpy as np
 import pickle, os
 
-model_path = os.path.join("plantDNet.h5")
+model_path = os.path.join("PlantDNet.h5")
 model = tf.keras.models.load_model('plantDNet.h5', compile=False)
 
 disease_class = ['Potato__bell___Bacterial_spot', 'Potato__bell___healthy', 'Pepper___Early_blight',
