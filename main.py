@@ -1,5 +1,6 @@
 import streamlit as st
-import cv2
+# import cv2
+from cv2 import imread, resize
 from matplotlib import pyplot as plt
 import os
 import numpy as np
