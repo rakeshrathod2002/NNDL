@@ -4,5 +4,3 @@ opencv-python-headless
 Pillow==9.1.0
 streamlit==1.4.0
 tensorflow==2.8.0
-libgl1
-libgl1-mesa-glx
